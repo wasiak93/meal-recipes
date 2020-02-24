@@ -4,7 +4,9 @@ import "./App.css";
 function App() {
   const name = "chicken";
 
-  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
+  fetch(
+    `https://cors-anywhere.herokuapp.com/https://www.athemealdb.com/api/json/v1/1/search.php?s=${name}`
+  )
     .then(response => {
       if (response.ok) {
         return response.json();
