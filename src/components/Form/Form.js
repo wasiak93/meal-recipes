@@ -1,10 +1,12 @@
 import React from "react";
+import Input from "./Input";
+import Button from "./Button";
 
-const Form = () => {
+const Form = ({ submit, value, handleInput }) => {
   return (
-    <form action="submit">
-      <input type="text" />
-      <button></button>
+    <form action="submit" onSubmit={submit}>
+      <Input value={value} handleInput={handleInput} />
+      <Button />
     </form>
   );
 };

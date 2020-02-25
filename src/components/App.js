@@ -6,8 +6,11 @@ import Result from "./ResultsList/List";
 function App() {
   const name = "chicken";
   const [data, setData] = useState([]);
+  const [value, setValue] = useState("lol");
 
-  useEffect(() => {
+  const handleForm = e => {
+    e.preventDefault();
+
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
       .then(response => {
         if (response.ok) {
@@ -16,12 +19,16 @@ function App() {
           throw Error("Something gone wrong :(");
         }
       })
-      .then(resp => setData([...resp.meals]))
+      .then(resp => setData([...resp.meals]), [])
       .catch(error => console.log(error));
-  }, []);
+  };
+
+  const handleInput = e => {
+    setValue(e.target.value);
+  };
   return (
     <div className="App">
-      <Form />
+      <Form submit={handleForm} value={value} handleInput={handleInput} />
       {data.length >= 1 ? <Result data={data} /> : null}
     </div>
   );
