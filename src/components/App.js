@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Form from "./Form/Form";
 import Result from "./ResultsList/List";
@@ -6,7 +6,7 @@ import Result from "./ResultsList/List";
 function App() {
   const name = "chicken";
   const [data, setData] = useState([]);
-  const [value, setValue] = useState("lol");
+  const [value, setValue] = useState("chicken");
 
   const handleForm = e => {
     e.preventDefault();
