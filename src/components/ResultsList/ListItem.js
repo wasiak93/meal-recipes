@@ -8,15 +8,27 @@ const ListItem = ({ item }) => {
   for (let i = 1; i <= 20; i++) {
     if (item[`strIngredient${i}`] !== "") {
       ingridentsWithMeasure.push({
+        id: i,
         name: item[`strIngredient${i}`],
         measure: item[`strMeasure${i}`]
       });
     }
   }
 
-  console.log(ingridentsWithMeasure);
-
-  return <p>{item.strMeal}</p>;
+  return (
+    <div>
+      <p>{item.strMeal}</p>
+      <div>
+        {ingridentsWithMeasure.map(ingri => (
+          <p key={item.idMeal + ingri.id}>
+            <span>{ingri.name}: </span>
+            <span>{ingri.measure}</span>
+          </p>
+        ))}
+      </div>
+      <video src={item.strYoutube} samesite=""></video>
+    </div>
+  );
 };
 
 export default ListItem;
