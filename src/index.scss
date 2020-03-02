@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap&subset=latin-ext');
+@import "./utils/variables.scss";
+
+
+html {
+  font-family: map-get($fonts, main);
+  color: map-get($fonts, color);
+}

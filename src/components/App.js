@@ -36,10 +36,12 @@ function App() {
   if (data.length >= 1) {
     result = <Result data={data} />;
   } else if (isSearch && typeof data.length >= 1) {
-    result = `Upsss, ther isn't any recipes for '${value} `;
+    result = (
+      <p className="app__no-result-info"></p>
+    )`Upsss, ther isn't any recipes for '${value} `;
   }
   return (
-    <div className="App">
+    <div className="app">
       <Form submit={handleForm} value={value} handleInput={handleInput} />
       {result}
     </div>
