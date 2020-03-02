@@ -1,4 +1,5 @@
 import React from "react";
+import "./Input.scss";
 
 const Input = ({ value, handleInput }) => {
   return (
@@ -7,6 +8,7 @@ const Input = ({ value, handleInput }) => {
       value={value}
       onChange={handleInput}
       className="form__input input"
+      placeholder="write meal name"
     />
   );
 };

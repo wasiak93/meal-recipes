@@ -1,0 +1,5 @@
+@import "../../utils//variables.scss";
+
+.input {
+  @include item-with-border
+}

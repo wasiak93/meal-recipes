@@ -1,7 +1,6 @@
 @import "../../utils//variables.scss";
 
 .button {
-  @include item-with-border;
-  box-shadow: $box-shadow;
+  @include item-with-border(uppercase, bold, 1.5px);
   border-radius: 5px;
 }

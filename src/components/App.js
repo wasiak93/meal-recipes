@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import Form from "./Form/Form";
 import Result from "./ResultsList/List";
 import { trackPromise } from "react-promise-tracker";
