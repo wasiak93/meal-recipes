@@ -1,6 +1,12 @@
-@import "../../utils//variables.scss";
+@import "../../utils//mixins.scss";
 
 .button {
   @include item-with-border(uppercase, bold, 1.5px);
   border-radius: 5px;
+  transition: .3;
+}
+
+.button:hover {
+  background-color: darken(white, 13%);
+  border: 2px solid darken(white, 13%);
 }

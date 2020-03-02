@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+@mixin item-with-border($transform: lowercase, $weight: normal, $spacing: normal) {
+  border: 2px solid #eee;
+  box-shadow: $box-shadow;
+  background-color: white;
+  font-family: map-get($fonts, form);
+  color: map-get($fonts, color);
+  margin: 10px 10px;
+  text-transform: $transform;
+  padding: 3px 10px;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
