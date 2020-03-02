@@ -24,7 +24,7 @@ const ListItem = ({ item }) => {
           </p>
         ))}
       </div>
-      <video src={item.strYoutube} samesite=""></video>
+      {/* <video src={item.strYoutube} samesite=""></video> */}
     </div>
   );
 };
