@@ -33,7 +33,12 @@ const ListItem = ({ item }) => {
           ))}
         </div>
       </div>
-      <a href={item.strYoutube} className="item__video-button">
+      <a
+        href={item.strYoutube}
+        className="item__video-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         go to video{" "}
       </a>
     </li>
