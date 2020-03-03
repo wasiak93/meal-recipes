@@ -15,7 +15,6 @@ function App() {
   const handleForm = e => {
     e.preventDefault();
     if (value.length >= 2) {
-      console.log("szukam");
       trackPromise(
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
           .then(response => {
