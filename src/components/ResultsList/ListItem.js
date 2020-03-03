@@ -16,7 +16,7 @@ const ListItem = ({ item }) => {
       });
     }
   }
-  console.log(item);
+
   return (
     <li className="item list__item">
       <p className="item__meal-name">{item.strMeal}</p>
@@ -26,10 +26,10 @@ const ListItem = ({ item }) => {
         </div>
         <div className="item-ingridents">
           {ingridentsWithMeasure.map(ingri => (
-            <p key={item.idMeal + ingri.id} className="item__ingrident">
-              <span>{ingri.name}:</span>
+            <div key={item.idMeal + ingri.id} className="item__ingrident">
+              <span className="item__ingrident-name">{ingri.name}</span>
               <span className="item__measure">{ingri.measure}</span>
-            </p>
+            </div>
           ))}
         </div>
       </div>

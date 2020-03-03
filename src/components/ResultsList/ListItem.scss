@@ -18,22 +18,24 @@
 .item__meal-name {
   text-align: center;
   font-size: map-get($map: $fonts, $key: header-size);
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .item__details {
   display: flex;
   justify-content: space-around;
-  // align-content: center;
-  flex-basis: 150px;
+  align-items: center;
+  flex-grow: 1;
+  // flex-basis: 200px;
+  min-height: 200px;
   @include wrapper;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin: 0 auto 20px;
 }
 
 .item__photo-wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -46,13 +48,43 @@
 
 .item-ingridents {
   flex-grow: 1;
+
 }
 
 .item__ingrident {
   display: flex;
   justify-content: space-between;
   font-size: map-get($map: $fonts, $key: ingridents);
+  // position: relative;
+
+
+  // &::after {
+  //   content: "";
+  //   height: 1px;
+  //   width: 100%;
+  //   border-bottom: 1px dashed #333;
+  //   position: absolute;
+  //   bottom: 2px;
+  //   left: 10%;
+  // }
+
+  // span {
+  //   background-color: $background-color;
+  //   z-index: 2;
+  // }
 }
+
+.item__ingrident-name {
+  text-align: left;
+  padding-right: 2px;
+  min-width: 60px;
+}
+
+.item__measure {
+  text-align: right;
+  padding-left: 2px;
+}
+
 
 .item__video-button {
   @include item-with-border(uppercase, bold, normal, none, 120px);
