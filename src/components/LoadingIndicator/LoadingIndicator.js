@@ -8,7 +8,7 @@ const LoadingIndicator = () => {
   return (
     promiseInProgress && (
       <div className="loader">
-        <Loader type="ThreeDots" color="#2BAD60" />
+        <Loader type="ThreeDots" color="#1e58ff" />
       </div>
     )
   );
