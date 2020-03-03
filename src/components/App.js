@@ -3,20 +3,20 @@ import "./App.scss";
 import Form from "./Form/Form";
 import Result from "./ResultsList/List";
 import { trackPromise } from "react-promise-tracker";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 function App() {
   const name = "chicken";
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
   const [value, setValue] = useState("");
-  const [isSearch, setSearch] = useState(false);
-  const [showNoResults, setShow] = useState(false);
+  // const [search, setSearch] = useState(false);
+  // const [showNoResults, setShow] = useState(false);
 
   const handleForm = e => {
     e.preventDefault();
     if (value.length >= 2) {
       trackPromise(
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
           .then(response => {
             if (response.ok) {
               return response;
@@ -34,7 +34,9 @@ function App() {
           }, [])
           .catch(error => console.log(error))
       );
-    } else setData("");
+    } else {
+      setData("");
+    }
   };
 
   // useEffect(() => {
@@ -46,10 +48,12 @@ function App() {
     setValue(e.target.value);
   };
   return (
-    <div className="app">
+    <div className="wrapper">
       <Form submit={handleForm} value={value} handleInput={handleInput} />
       {/* {showNoResults ? <p>ahoj</p> : null} */}
-      {data === "" ? <p>no result</p> : null}
+      {/* {data === "" ? (
+        <p className="wrapper__results-info"> no result for "{value}"</p>
+      ) : null} */}
       {data.length >= 1 ? <Result data={data} /> : null}
     </div>
   );

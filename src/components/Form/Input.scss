@@ -1,5 +1,5 @@
 @import "../../utils//mixins.scss";
 
 .input {
-  @include item-with-border
+  @include item-with-border($basis: 40%)
 }

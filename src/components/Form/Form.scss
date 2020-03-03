@@ -1,5 +1,9 @@
 @import "../../utils/variables.scss";
 
 .form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   background-color: $background-color;
+  margin: 20px 0 40px;
 }
