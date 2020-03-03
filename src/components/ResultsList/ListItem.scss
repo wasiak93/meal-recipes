@@ -92,4 +92,9 @@
   text-align: center;
   margin: 0 auto 0px;
   text-decoration: none;
+
+  &:hover {
+    background-color: darken(white, 13%);
+    border: 2px solid darken(white, 13%);
+  }
 }
