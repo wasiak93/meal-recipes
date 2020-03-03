@@ -17,11 +17,14 @@ const ListItem = ({ item }) => {
     <li className="item list__item">
       <p className="item__meal-name">{item.strMeal}</p>
       <div className="item__details">
-        <img src={item.strMealThumb} alt="meal" className="item__photo"></img>
+        <div className="item__photo-wrapper">
+          <img src={item.strMealThumb} alt="meal" className="item__photo"></img>
+        </div>
         <div className="item-ingridents">
           {ingridentsWithMeasure.map(ingri => (
             <p key={item.idMeal + ingri.id} className="item__ingrident">
-              {ingri.name}: {ingri.measure}
+              <span>{ingri.name}:</span>
+              <span className="item__measure">{ingri.measure}</span>
             </p>
           ))}
         </div>
