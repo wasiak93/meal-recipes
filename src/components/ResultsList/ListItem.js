@@ -5,7 +5,10 @@ const ListItem = ({ item }) => {
   let ingridentsWithMeasure = [];
   // I know that max quantity of ingridents is 20, igridents start from 1 not from 0. Ingrident and measure have the same number
   for (let i = 1; i <= 20; i++) {
-    if (item[`strIngredient${i}`] !== "") {
+    if (
+      item[`strIngredient${i}`] !== "" &&
+      item[`strIngredient${i}`] !== null
+    ) {
       ingridentsWithMeasure.push({
         id: i,
         name: item[`strIngredient${i}`],
@@ -13,6 +16,7 @@ const ListItem = ({ item }) => {
       });
     }
   }
+  console.log(item);
   return (
     <li className="item list__item">
       <p className="item__meal-name">{item.strMeal}</p>

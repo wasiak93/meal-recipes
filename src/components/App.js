@@ -6,7 +6,7 @@ import { trackPromise } from "react-promise-tracker";
 // import { useEffect } from "react";
 
 function App() {
-  const name = "chicken";
+  // const name = "chicken";
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   // const [search, setSearch] = useState(false);
@@ -16,7 +16,7 @@ function App() {
     e.preventDefault();
     if (value.length >= 2) {
       trackPromise(
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
           .then(response => {
             if (response.ok) {
               return response;
