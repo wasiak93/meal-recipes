@@ -1,4 +1,5 @@
 import React from "react";
+import "./ListItem.scss";
 
 const ListItem = ({ item }) => {
   let ingridentsWithMeasure = [];
@@ -12,20 +13,23 @@ const ListItem = ({ item }) => {
       });
     }
   }
-
   return (
-    <div>
-      <p>{item.strMeal}</p>
-      <div>
-        {ingridentsWithMeasure.map(ingri => (
-          <p key={item.idMeal + ingri.id}>
-            <span>{ingri.name}: </span>
-            <span>{ingri.measure}</span>
-          </p>
-        ))}
+    <li className="item list__item">
+      <p className="item__meal-name">{item.strMeal}</p>
+      <div className="item__details">
+        <img src={item.strMealThumb} alt="meal" className="item__photo"></img>
+        <div className="item-ingridents">
+          {ingridentsWithMeasure.map(ingri => (
+            <p key={item.idMeal + ingri.id} className="item__ingrident">
+              {ingri.name}: {ingri.measure}
+            </p>
+          ))}
+        </div>
       </div>
-      {/* <video src={item.strYoutube} samesite=""></video> */}
-    </div>
+      <a href={item.strYoutube} className="item__video-button">
+        go to video{" "}
+      </a>
+    </li>
   );
 };
 

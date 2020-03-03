@@ -1,0 +1,53 @@
+@import "../../utils/variables.scss";
+@import "../../utils/mixins.scss";
+
+.item {
+  margin: 10px 0px;
+  box-shadow: $box-shadow;
+  padding: 10px 5px;
+  width: 300px;
+
+}
+
+.list__item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.item__meal-name {
+  text-align: center;
+  font-size: map-get($map: $fonts, $key: header-size);
+  padding-bottom: 10px;
+}
+
+.item__details {
+  display: flex;
+  justify-content: space-around;
+  @include wrapper;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.item__photo {
+  display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.item__ingridents {}
+
+.item__ingrident {
+  font-size: map-get($map: $fonts, $key: ingridents);
+
+}
+
+.item__video-button {
+  @include item-with-border(uppercase, bold, normal, none, 120px);
+  display: block;
+  text-align: center;
+  margin: 20px auto 0px;
+  text-decoration: none;
+}

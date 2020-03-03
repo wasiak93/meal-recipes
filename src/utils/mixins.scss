@@ -15,3 +15,8 @@
   flex-basis: $basis;
   max-width: $max-width;
 }
+
+@mixin wrapper {
+  width: 95%;
+  margin: auto;
+}

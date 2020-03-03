@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Form from "./Form/Form";
-import Result from "./ResultsList/List";
+import Results from "./ResultsList/Results";
 import { trackPromise } from "react-promise-tracker";
 // import { useEffect } from "react";
 
@@ -54,7 +54,7 @@ function App() {
       {/* {data === "" ? (
         <p className="wrapper__results-info"> no result for "{value}"</p>
       ) : null} */}
-      {data.length >= 1 ? <Result data={data} /> : null}
+      {data.length >= 1 ? <Results data={data} /> : null}
     </div>
   );
 }

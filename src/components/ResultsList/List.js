@@ -1,14 +1,15 @@
 import React from "react";
 import ListItem from "./ListItem";
+import "./List.scss";
 
-const Result = ({ data }) => {
+const List = ({ data }) => {
   return (
-    <div>
+    <ul className="list results__list">
       {data.map(item => (
         <ListItem key={item.idMeal} item={item} />
       ))}
-    </div>
+    </ul>
   );
 };
 
-export default Result;
+export default List;

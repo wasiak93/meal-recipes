@@ -1,8 +1,9 @@
 @import "../utils/variables.scss";
+@import "../utils/mixins.scss";
+
 
 .wrapper {
-  width: 95%;
-  margin: auto;
+  @include wrapper
 }
 
 .wrapper__results-info {
