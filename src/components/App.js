@@ -9,12 +9,16 @@ function App() {
   // const name = "chicken";
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
-  // const [search, setSearch] = useState(false);
-  // const [showNoResults, setShow] = useState(false);
+  const [search, setSearch] = useState(false);
+  const [isClicked, setClicked] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleForm = e => {
     e.preventDefault();
+    setClicked(true);
     if (value.length >= 2) {
+      setSearch(value);
+      setIsLoading(true);
       trackPromise(
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`)
           .then(response => {
@@ -27,11 +31,16 @@ function App() {
           .then(response => {
             return response.json();
           })
-          .then(resp => {
-            if (resp.meals) {
-              setData([...resp.meals]);
-            } else setData("");
-          }, [])
+          .then(
+            resp => {
+              if (resp.meals) {
+                setData([...resp.meals]);
+              } else setData(false);
+              setIsLoading(false);
+            },
+
+            []
+          )
           .catch(error => console.log(error))
       );
     } else {
@@ -45,8 +54,10 @@ function App() {
   //   if (typeof data == "string") return setShow(true);
   // }, [data, showNoResults]);
   const handleInput = e => {
+    setClicked(false);
     setValue(e.target.value);
   };
+
   return (
     <div className="wrapper">
       <Form submit={handleForm} value={value} handleInput={handleInput} />
@@ -54,7 +65,10 @@ function App() {
       {/* {data === "" ? (
         <p className="wrapper__results-info"> no result for "{value}"</p>
       ) : null} */}
-      {data.length >= 1 ? <Results data={data} /> : null}
+      {isLoading === false && data === false && isClicked === true ? (
+        <p className="wrapper__results-info"> no result for "{value}"</p>
+      ) : null}
+      {data.length >= 1 ? <Results data={data} search={search} /> : null}
     </div>
   );
 }
