@@ -10,12 +10,11 @@ function App() {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
   const [search, setSearch] = useState(false);
-  const [isClicked, setClicked] = useState(false);
+  // const [isClicked, setClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleForm = e => {
     e.preventDefault();
-    setClicked(true);
     if (value.length >= 2) {
       setSearch(value);
       setIsLoading(true);
@@ -54,7 +53,6 @@ function App() {
   //   if (typeof data == "string") return setShow(true);
   // }, [data, showNoResults]);
   const handleInput = e => {
-    setClicked(false);
     setValue(e.target.value);
   };
 
@@ -65,8 +63,13 @@ function App() {
       {/* {data === "" ? (
         <p className="wrapper__results-info"> no result for "{value}"</p>
       ) : null} */}
-      {isLoading === false && data === false && isClicked === true ? (
-        <p className="wrapper__results-info"> no result for "{value}"</p>
+      {isLoading === false && data === false ? (
+        //  &&
+        // isClicked === true && search
+        <p className="wrapper__results-info"> no result for "{search}"</p>
+      ) : null}
+      {value.length <= 1 && data === "" ? (
+        <p className="wrapper__results-info">please type at least two chars</p>
       ) : null}
       {data.length >= 1 ? <Results data={data} search={search} /> : null}
     </div>

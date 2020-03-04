@@ -5,8 +5,8 @@ import "./List.scss";
 const List = ({ data }) => {
   return (
     <ul className="list results__list">
-      {data.map(item => (
-        <ListItem key={item.idMeal} item={item} />
+      {data.map((item, index) => (
+        <ListItem key={index + 1} item={item} />
       ))}
     </ul>
   );

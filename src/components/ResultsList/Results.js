@@ -6,7 +6,9 @@ const Results = ({ data, search }) => {
   return (
     <div className="results app__results">
       {search ? (
-        <p className="wrapper__results-info">results for "{search}"</p>
+        <p className="wrapper__results-info">
+          results for "{search}"<span>({data.length}):</span>
+        </p>
       ) : null}
       <List data={data} />
     </div>
