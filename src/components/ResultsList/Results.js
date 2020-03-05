@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import List from "./List";
-import "./Results.scss";
 import { trackPromise } from "react-promise-tracker";
 
 const Results = ({ search }) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  console.log("rendering");
+
   const fetchData = useCallback(() => {
     setIsLoading(true);
     trackPromise(
