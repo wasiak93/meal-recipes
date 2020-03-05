@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ListItem.scss";
 
 const ListItem = ({ item }) => {
@@ -21,6 +21,9 @@ const ListItem = ({ item }) => {
       });
     }
   }
+  useEffect(() => {
+    setActiveInstruction(false);
+  }, [item]);
 
   return (
     <li className="item list__item">
