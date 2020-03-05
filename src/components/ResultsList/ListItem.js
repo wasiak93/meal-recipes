@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ListItem.scss";
 
 const ListItem = ({ item }) => {
+  const [activeInstruction, setActiveInstruction] = useState(false);
+
+  const handleInstructionButton = () => {
+    setActiveInstruction(!activeInstruction);
+  };
   let ingridentsWithMeasure = [];
   // I know that max quantity of ingridents is 20, igridents start from 1 not from 0. Ingrident and measure have the same number
   for (let i = 1; i <= 20; i++) {
@@ -44,8 +49,13 @@ const ListItem = ({ item }) => {
             go to video{" "}
           </a>
         )}
-        <button className="item__button">instructions</button>
+        <button className="item__button" onClick={handleInstructionButton}>
+          instruction
+        </button>
       </div>
+      {activeInstruction && (
+        <p className="item__instruction">{item.strInstructions}</p>
+      )}
     </li>
   );
 };
