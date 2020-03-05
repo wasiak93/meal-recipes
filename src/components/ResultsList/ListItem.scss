@@ -67,8 +67,11 @@
   padding-left: 2px;
 }
 
+.item__buttons-wrapper {
+  display: flex;
+}
 
-.item__video-button {
+.item__button {
   @include item-with-border(uppercase, bold, normal, none, 120px);
   display: block;
   text-align: center;

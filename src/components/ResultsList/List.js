@@ -3,6 +3,7 @@ import ListItem from "./ListItem";
 import "./List.scss";
 
 const List = ({ data }) => {
+  console.log(data);
   return (
     <ul className="list results__list">
       {data.map((item, index) => (
