@@ -4,8 +4,10 @@ $fonts: (main: 'Roboto',
   normal-size: 18px,
   form-size: 13px,
   ingridents: 9px,
-  header-size: 20px);
+  header-size: 20px,
+  header-size-popup:28px);
 
 $background-color: white;
+$background-color-popup: rgba(200, 200, 200, 0.6);
 
 $box-shadow: 2px 2px 5px 2px rgba(#1e58ff, .3);

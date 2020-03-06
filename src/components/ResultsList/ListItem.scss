@@ -6,7 +6,7 @@
   box-shadow: $box-shadow;
   padding: 10px 5px;
   width: 300px;
-
+  position: relative;
 }
 
 .list__item {
@@ -14,6 +14,12 @@
   display: flex;
   flex-direction: column;
 }
+
+// .list__item--active {
+//   z-index: 1;
+//   // position: absolute;
+//   background-color: white;
+// }
 
 .item__meal-name {
   text-align: center;
@@ -28,7 +34,7 @@
   flex-grow: 1;
   min-height: 200px;
   @include wrapper;
-  overflow: hidden;
+  // overflow: hidden;
   margin: 0 auto 20px;
 }
 
@@ -45,7 +51,7 @@
   margin-right: 10px;
 }
 
-.item-ingridents {
+.item__ingridents {
   flex-grow: 1;
 
 }
@@ -70,6 +76,15 @@
 .item__buttons-wrapper {
   display: flex;
 }
+
+// .item__instruction {
+//   position: absolute;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: white;
+//   // top: calc(50% - 300px);
+//   // left: calc(50% - 300px);
+// }
 
 .item__button {
   @include item-with-border(uppercase, bold, normal, none, 120px);

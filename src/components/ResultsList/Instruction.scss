@@ -1,0 +1,62 @@
+@import '../../utils//variables.scss';
+@import "../../utils/mixins.scss";
+
+.popup {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  max-height: 100%;
+  overflow-y: scroll;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $background-color-popup;
+  margin: 0;
+
+  &__close-button {
+    position: absolute;
+
+    top: 5px;
+    right: 10px;
+    background-color: $background-color;
+    border: none;
+    color: red;
+    font-weight: bold;
+    padding: 5px;
+    font-size: map-get($map: $fonts, $key: header-size-popup);
+    font-family: map-get($map: $fonts, $key: main);
+  }
+
+  .list__item {
+    background-color: $background-color;
+    flex-basis: 90%;
+    max-width: 600px;
+    margin: 20px;
+    height: 100%;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+  }
+
+  .item__meal-name {
+    font-size: map-get($map: $fonts, $key: header-size-popup);
+    padding: 10px;
+  }
+
+  .item__instruction-text {
+    font-size: map-get($map: $fonts, $key: form-size);
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .item__details {
+    justify-content: center;
+  }
+
+  .item__ingridents {
+    max-width: 200px;
+
+  }
+}

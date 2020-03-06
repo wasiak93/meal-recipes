@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ListItem.scss";
+import Instruction from "./Instruction";
 
 const ListItem = ({ item }) => {
   const [activeInstruction, setActiveInstruction] = useState(false);
@@ -7,6 +8,10 @@ const ListItem = ({ item }) => {
   const handleInstructionButton = () => {
     setActiveInstruction(!activeInstruction);
   };
+
+  // const handleButtonClosePopup = () => {
+  //   setActiveInstruction(false);
+  // };
   let ingridentsWithMeasure = [];
   // I know that max quantity of ingridents is 20, igridents start from 1 not from 0. Ingrident and measure have the same number
   for (let i = 1; i <= 20; i++) {
@@ -21,6 +26,8 @@ const ListItem = ({ item }) => {
       });
     }
   }
+
+  // clean when item is change
   useEffect(() => {
     setActiveInstruction(false);
   }, [item]);
@@ -32,7 +39,7 @@ const ListItem = ({ item }) => {
         <div className="item__photo-wrapper">
           <img src={item.strMealThumb} alt="meal" className="item__photo"></img>
         </div>
-        <div className="item-ingridents">
+        <div className="item__ingridents">
           {ingridentsWithMeasure.map(ingri => (
             <div key={item.idMeal + ingri.id} className="item__ingrident">
               <span className="item__ingrident-name">{ingri.name}</span>
@@ -57,7 +64,11 @@ const ListItem = ({ item }) => {
         </button>
       </div>
       {activeInstruction && (
-        <p className="item__instruction">{item.strInstructions}</p>
+        <Instruction
+          ingridentsWithMeasure={ingridentsWithMeasure}
+          item={item}
+          closePopup={handleInstructionButton}
+        />
       )}
     </li>
   );
