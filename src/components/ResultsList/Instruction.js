@@ -5,8 +5,13 @@ const Instruction = ({ ingridentsWithMeasure, item, closePopup }) => {
   return (
     <div className="popup">
       <div className="item list__item list__item--active">
-        <button className="popup__close-button" onClick={closePopup}>
-          X
+        <button
+          className="close-button popup__close-button "
+          onClick={closePopup}
+        >
+          <span className="close-button__box">
+            <span className="close-button__inner"></span>
+          </span>
         </button>
         <p className="item__meal-name">{item.strMeal}</p>
         <div className="item__details ">
