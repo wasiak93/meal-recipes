@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./ListItem.scss";
 import Instruction from "./Instruction";
 
@@ -23,11 +23,6 @@ const ListItem = ({ item }) => {
       });
     }
   }
-
-  // clean when item is change
-  useEffect(() => {
-    setActiveInstruction(false);
-  }, [item]);
 
   return (
     <li className="item list__item">
