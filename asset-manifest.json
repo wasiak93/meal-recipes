@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/meal-recipes/static/css/main.6e3d3031.chunk.css",
-    "main.js": "/meal-recipes/static/js/main.4218e81a.chunk.js",
-    "main.js.map": "/meal-recipes/static/js/main.4218e81a.chunk.js.map",
+    "main.css": "/meal-recipes/static/css/main.55a31df4.chunk.css",
+    "main.js": "/meal-recipes/static/js/main.da8396be.chunk.js",
+    "main.js.map": "/meal-recipes/static/js/main.da8396be.chunk.js.map",
     "runtime-main.js": "/meal-recipes/static/js/runtime-main.a6deb911.js",
     "runtime-main.js.map": "/meal-recipes/static/js/runtime-main.a6deb911.js.map",
-    "static/js/2.b9d11130.chunk.js": "/meal-recipes/static/js/2.b9d11130.chunk.js",
-    "static/js/2.b9d11130.chunk.js.map": "/meal-recipes/static/js/2.b9d11130.chunk.js.map",
+    "static/js/2.544cd186.chunk.js": "/meal-recipes/static/js/2.544cd186.chunk.js",
+    "static/js/2.544cd186.chunk.js.map": "/meal-recipes/static/js/2.544cd186.chunk.js.map",
     "index.html": "/meal-recipes/index.html",
-    "precache-manifest.c02a63662a50536fa1126ee7da64b2b8.js": "/meal-recipes/precache-manifest.c02a63662a50536fa1126ee7da64b2b8.js",
+    "precache-manifest.7df13a0c410b485e1d4b21c605525718.js": "/meal-recipes/precache-manifest.7df13a0c410b485e1d4b21c605525718.js",
     "service-worker.js": "/meal-recipes/service-worker.js",
-    "static/css/main.6e3d3031.chunk.css.map": "/meal-recipes/static/css/main.6e3d3031.chunk.css.map",
-    "static/js/2.b9d11130.chunk.js.LICENSE.txt": "/meal-recipes/static/js/2.b9d11130.chunk.js.LICENSE.txt"
+    "static/css/main.55a31df4.chunk.css.map": "/meal-recipes/static/css/main.55a31df4.chunk.css.map",
+    "static/js/2.544cd186.chunk.js.LICENSE.txt": "/meal-recipes/static/js/2.544cd186.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a6deb911.js",
-    "static/js/2.b9d11130.chunk.js",
-    "static/css/main.6e3d3031.chunk.css",
-    "static/js/main.4218e81a.chunk.js"
+    "static/js/2.544cd186.chunk.js",
+    "static/css/main.55a31df4.chunk.css",
+    "static/js/main.da8396be.chunk.js"
   ]
 }
