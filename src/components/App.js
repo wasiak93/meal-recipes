@@ -19,9 +19,7 @@ function App() {
   let result = "";
 
   if (searchValue !== false)
-    result = (
-      <p className="wrapper__results-info">please type at least two chars</p>
-    );
+    result = <p className="results-info">please type at least two chars</p>;
 
   if (searchValue.length >= 2) {
     result = <Results search={searchValue} />;
