@@ -15,12 +15,6 @@
   flex-direction: column;
 }
 
-// .list__item--active {
-//   z-index: 1;
-//   // position: absolute;
-//   background-color: white;
-// }
-
 .item__meal-name {
   text-align: center;
   font-size: map-get($map: $fonts, $key: header-size);
@@ -34,7 +28,6 @@
   flex-grow: 1;
   min-height: 200px;
   @include wrapper;
-  // overflow: hidden;
   margin: 0 auto 20px;
 }
 
@@ -77,15 +70,6 @@
   display: flex;
   margin-bottom: 10px;
 }
-
-// .item__instruction {
-//   position: absolute;
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: white;
-//   // top: calc(50% - 300px);
-//   // left: calc(50% - 300px);
-// }
 
 .item__button {
   @include item-with-border(uppercase, bold, normal, none, 120px, $font-size:map-get($fonts, button-size));
