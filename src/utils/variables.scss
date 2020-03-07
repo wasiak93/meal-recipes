@@ -2,7 +2,9 @@ $fonts: (main: 'Roboto',
   form: 'Open Sans',
   color: #333,
   normal-size: 18px,
-  form-size: 13px,
+  form-size-mobile: 13px,
+  form-size-desktop: 18px,
+  button-size:13px,
   ingridents: 9px,
   ingridents-popup: 12px,
   text-popup: 16px,
@@ -13,4 +15,5 @@ $fonts: (main: 'Roboto',
 $background-color: white;
 $background-color-popup: rgba(200, 200, 200, 0.6);
 
-$box-shadow: 2px 2px 5px 2px rgba(#1e58ff, .3);
+$box-shadow: 2px 2px 5px rgba(#1e58ff, .3);
+$box-shadow-item: 2px 2px 5px 2px rgba(#1e58ff, .3);

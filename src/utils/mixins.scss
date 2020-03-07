@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-@mixin item-with-border($transform: lowercase, $weight: normal, $spacing: normal, $basis: 20%, $max-width: auto) {
+@mixin item-with-border($transform: lowercase, $weight: normal, $spacing: normal, $basis: 20%, $max-width: auto, $line: normal, $font-size:map-get($fonts, form-size)) {
   border: 2px solid #eee;
   box-shadow: $box-shadow;
   background-color: white;
@@ -11,9 +11,10 @@
   padding: 3px 10px;
   font-weight: $weight;
   letter-spacing: $spacing;
-  font-size: map-get($fonts, form-size);
+  font-size: $font-size;
   flex-basis: $basis;
   max-width: $max-width;
+  line-height: $line;
 }
 
 @mixin wrapper {

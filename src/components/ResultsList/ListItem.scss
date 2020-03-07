@@ -3,7 +3,7 @@
 
 .item {
   margin: 10px 0px;
-  box-shadow: $box-shadow;
+  box-shadow: $box-shadow-item;
   padding: 10px 5px;
   width: 300px;
   position: relative;
@@ -75,6 +75,7 @@
 
 .item__buttons-wrapper {
   display: flex;
+  margin-bottom: 10px;
 }
 
 // .item__instruction {
@@ -87,7 +88,7 @@
 // }
 
 .item__button {
-  @include item-with-border(uppercase, bold, normal, none, 120px);
+  @include item-with-border(uppercase, bold, normal, none, 120px, $font-size:map-get($fonts, button-size));
   display: block;
   text-align: center;
   margin: 0 auto 0px;

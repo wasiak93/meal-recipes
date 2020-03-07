@@ -1,5 +1,11 @@
 @import "../../utils//mixins.scss";
 
 .input {
-  @include item-with-border($basis: 40%)
+  @include item-with-border($basis: 40%, $line: 1.5)
+}
+
+@media(min-width: 640px) {
+  .input {
+    font-size: map-get($map: $fonts, $key: form-size-desktop)
+  }
 }

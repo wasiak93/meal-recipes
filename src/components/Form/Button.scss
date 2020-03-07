@@ -1,7 +1,7 @@
 @import "../../utils//mixins.scss";
 
 .button {
-  @include item-with-border(uppercase, bold, 1.5px, 100px);
+  @include item-with-border(uppercase, bold, 1.5px, 100px, );
   border-radius: 5px;
   transition: .3;
 }
@@ -9,4 +9,10 @@
 .button:hover {
   background-color: darken(white, 13%);
   border: 2px solid darken(white, 13%);
+}
+
+@media(min-width: 640px) {
+  .button {
+    font-size: map-get($map: $fonts, $key: form-size-desktop)
+  }
 }
