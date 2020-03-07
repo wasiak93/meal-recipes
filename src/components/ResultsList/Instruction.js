@@ -35,7 +35,7 @@ const Instruction = ({ ingridentsWithMeasure, item, closePopup }) => {
           {item.strYoutube && (
             <a
               href={item.strYoutube}
-              className="item__button"
+              className="item__button item__button--bigger"
               target="_blank"
               rel="noopener noreferrer"
             >

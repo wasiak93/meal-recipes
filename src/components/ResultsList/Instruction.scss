@@ -51,6 +51,15 @@
   .item__ingrident {
     font-size: map-get($map: $fonts, $key: ingridents-popup);
   }
+
+  .item__buttons-wrapper {
+    justify-content: center;
+  }
+
+  .item__button--bigger {
+    @include item-with-border($transform: uppercase, $weight: bold, $max-width:250px, $font-size:map-get($fonts, button-size-bigger));
+
+  }
 }
 
 .close-button {
