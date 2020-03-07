@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import List from "./List";
 import { trackPromise } from "react-promise-tracker";
+import "./Results.scss";
 
 const Results = ({ search }) => {
   const [data, setData] = useState([]);
@@ -45,14 +46,12 @@ const Results = ({ search }) => {
 
   if (data && !isLoading) {
     resultsInfo = (
-      <p className="wrapper__results-info">
-        results for "{search}"<span>({data.length}):</span>
+      <p className="results__info">
+        {data.length} {data.length === 1 ? `result` : `results`} for "{search}"
       </p>
     );
   } else if (!data && !isLoading) {
-    resultsInfo = (
-      <p className="wrapper__results-info"> no results for "{search}"</p>
-    );
+    resultsInfo = <p className="results__info"> no results for "{search}"</p>;
   }
 
   return (

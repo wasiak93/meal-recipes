@@ -1,13 +1,6 @@
-@import "../utils/variables.scss";
 @import "../utils/mixins.scss";
 
 
 .wrapper {
   @include wrapper
-}
-
-.wrapper__results-info {
-  text-align: center;
-  margin-top: 35px;
-  font-size: map-get($fonts, header-size);
 }
