@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5d32069c3131bffebc5afe452a2e7c57",
+    "revision": "c843182d1ca74ecb79fe6f2a7c8a690a",
     "url": "/meal-recipes/index.html"
   },
   {
-    "revision": "80e08f14455b1ccd97a9",
-    "url": "/meal-recipes/static/css/main.9c23f1d7.chunk.css"
+    "revision": "dbfba396e5803545ebd4",
+    "url": "/meal-recipes/static/css/main.594706f0.chunk.css"
   },
   {
     "revision": "863e8d07be8128e6b29d",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meal-recipes/static/js/2.544cd186.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "80e08f14455b1ccd97a9",
+    "revision": "dbfba396e5803545ebd4",
     "url": "/meal-recipes/static/js/main.da0f7c7d.chunk.js"
   },
   {
