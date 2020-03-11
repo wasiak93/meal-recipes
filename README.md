@@ -1,3 +1,5 @@
+Live: https://wasiak93.github.io/meal-recipes/
+
 Mobile view: 
 
 ![src/assets/screens/mobile.png](src/assets/screens/mobile.png)
