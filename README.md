@@ -1,15 +1,19 @@
 Live: https://wasiak93.github.io/meal-recipes/
 
 Mobile view: 
+
 ![src/assets/screens/mobile.png](src/assets/screens/mobile.png)
 ------------------------------------------------------------------
 Desktop view: 
+
 ![src/assets/screens/desktop.png](src/assets/screens/desktop.png)
 ------------------------------------------------------------------
 Mobile popup with instruction: 
+
 ![src/assets/screens/mobilePopup.png](src/assets/screens/mobilePopup.png)
 ------------------------------------------------------------------
 Desktop popup with instruction:
+
 ![src/assets/screens/desktopPopup.png](src/assets/screens/desktopPopup.png)
 ------------------------------------------------------------------
 ## Available Scripts
