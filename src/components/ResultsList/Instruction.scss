@@ -54,11 +54,11 @@
 
   .item__buttons-wrapper {
     justify-content: center;
+
   }
 
   .item__button--bigger {
-    @include item-with-border($transform: uppercase, $weight: bold, $max-width:250px, $font-size:map-get($fonts, button-size-bigger));
-
+    @include item-with-border($transform: uppercase, $weight: bold, $basis: auto, $max-width:250px, $font-size:map-get($fonts, button-size-bigger));
   }
 }
 
