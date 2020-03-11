@@ -8,9 +8,9 @@ Desktop view:
 
 Mobile popup with instruction: 
 
-![src/assets/screens/mobilePopup.png](src/assets/screens/monilePopup.png)
+![src/assets/screens/mobilePopup.png](src/assets/screens/mobilePopup.png)
 
-Desktop view: 
+Desktop popup with instruction:
 
 ![src/assets/screens/desktopPopup.png](src/assets/screens/desktopPopup.png)
 
