@@ -1,6 +1,18 @@
 Mobile view: 
 
-![src/assets/screen/mobile.png](src/assets/screens/mobile.png)
+![src/assets/screens/mobile.png](src/assets/screens/mobile.png)
+
+Desktop view: 
+
+![src/assets/screens/desktop.png](src/assets/screens/desktop.png)
+
+Mobile popup with instruction: 
+
+![src/assets/screens/mobilePopup.png](src/assets/screens/monilePopup.png)
+
+Desktop view: 
+
+![src/assets/screens/desktopPopup.png](src/assets/screens/desktopPopup.png)
 
 ## Available Scripts
 
