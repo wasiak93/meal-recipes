@@ -1,6 +1,6 @@
 Mobile view: 
 
-![src/assets/screen/mobile.png](src/assets/screen/mobile.png)
+![src/assets/screen/mobile.png](src/assets/screens/mobile.png)
 
 ## Available Scripts
 
